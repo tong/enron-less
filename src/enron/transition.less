@@ -1,0 +1,17 @@
+
+/*
+	--- TRANSITION -------------------------------------------------------------
+*/
+
+// .transition(color 1s, background 1s;);
+//									  |
+//							  SEMICOLON REQUIRED
+
+.transition(...) {
+
+	transition: @arguments;
+
+	@media screen and (prefers-reduced-motion: reduce) {
+    	transition: none;
+	}
+}
