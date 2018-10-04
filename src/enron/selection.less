@@ -1,0 +1,14 @@
+
+/* --- SELECTION ------------------------------------------------------------ */
+
+.selection( @color ) {
+	::selection {
+		color: @color;
+	}
+}
+.selection( @color; @background ) {
+	::selection {
+		color: @color;
+		background: @background;
+	}
+}
