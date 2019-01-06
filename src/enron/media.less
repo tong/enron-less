@@ -1,0 +1,39 @@
+
+/* ––– ENRON-MEDIA –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@breakpoint-1:  360px; // small handset
+@breakpoint-2:  400px; // medium handset
+@breakpoint-3:  480px; // large handset
+@breakpoint-4:  600px; // large handset
+@breakpoint-5:  720px; // small tablet
+@breakpoint-6:  840px;
+@breakpoint-7:  960px;
+@breakpoint-8:  1024px;
+@breakpoint-9:  1280px;
+@breakpoint-10: 1440px;
+@breakpoint-11: 1600px;
+@breakpoint-12: 1920px;
+
+@breakpoint-small:  30em;
+@breakpoint-large:  60em;
+@breakpoint-xlarge: 90em;
+
+@small: 	~"screen and (max-width: @{breakpoint-small})";
+@medium:	~"screen and (min-width: @{breakpoint-small}) and (max-width: @{breakpoint-large})";
+@large: 	~"screen and (min-width: @{breakpoint-large})";
+@xlarge: 	~"screen and (min-width: @{breakpoint-xlarge})";
+
+@not-small: ~"screen and (min-width: @{breakpoint-small})";
+@not-large: ~"screen and (min-width: @{breakpoint-large})";
+
+@phone: ~"(-webkit-min-device-pixel-ratio:2) and (orientation:portrait) and (max-width:30em),
+		  (-webkit-min-device-pixel-ratio:2) and (orientation:landscape) and (max-height:30em)";
+
+.on-max-width( @px; @rules ) {
+	@media (max-width:@px) { @rules(); }
+}
+
+.on-phone( @rules ) {
+	.on-max-width( 600px, @rules );
+	//@media (max-width:600px) { @rules(); }
+}
