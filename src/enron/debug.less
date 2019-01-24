@@ -1,0 +1,44 @@
+
+/* ––– ENRON-DEBUG –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@import (reference) "z-index";
+
+@color-blueprint-1: #9ce5fb;
+@color-blueprint-2: #5dd7fb;
+@color-blueprint-3: #26bbe7;
+@color-blueprint-4: #27a6cc;
+@color-blueprint-5: #1183a5;
+
+.debug-overlay() {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	user-select: none;
+	.z-max;
+}
+
+.draw-lines-h( @space; @color:#000; @thick:1px ) {
+	background-size: @space @space;
+    background-image: linear-gradient(to bottom, @color @thick, transparent 1px);
+}
+.draw-lines-v( @space; @color:#000; @thick:1px ) {
+	background-size: @space @space;
+    background-image: linear-gradient(to right, @color @thick, transparent 1px);
+}
+
+.draw-grid( @size; @color:blue; @thick:1px ) {
+	background-size: @size @size;
+    background-image:
+        linear-gradient(to right, @color @thick, transparent 1px),
+        linear-gradient(to bottom, @color @thick, transparent 1px);
+}
+
+.debug-grid( @size; @color:@color-blueprint-3; @thick:1px ) {
+	.debug-overlay;
+	.draw-grid( @size, @color, @thick );
+}
