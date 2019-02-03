@@ -1,0 +1,10 @@
+
+.shape-circle( @size ) {
+    width: @size;
+    height: @size;
+    border-radius: 100%;
+}
+.shape-circle( @size; @color; ) {
+    .shape-circle( @size );
+    background-color: @color;
+}

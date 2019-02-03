@@ -1,0 +1,16 @@
+
+.shape-rectangle( @width; @height ) {
+	width: @width;
+	height: @height;
+}
+.shape-rectangle( @width; @height; @color ) {
+	.shape-rectangle( @width, @height );
+	background-color: @color;
+}
+
+.shape-square( @size ) {
+	.shape-rectangle( @size, @size );
+}
+.shape-square( @size; @color ) {
+	.shape-rectangle( @size, @size, @color );
+}

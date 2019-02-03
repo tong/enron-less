@@ -1,8 +1,8 @@
 
 /* ––– ENRON-TYPOGRAPHY ––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@font-regular: Roboto;
-@font-title: @font-regular;
+//@font-regular: Roboto;
+//@font-title: @font-regular;
 
 @typo_base_rules: {
 	-moz-osx-font-smoothing: grayscale;
@@ -21,20 +21,18 @@
 
 //---
 
-.typo-headline( @size; @height:@size; @weight:700 ) {
-	//font-family: @font-family-headline;
-	font-family: @font-title;
+.typo-headline( @size; @height:@size; @weight:700; @transform:inherit ) {
+	font-family: @font-family-headline;
 	font-size: @size;
 	font-weight: @weight;
 	line-height: @height;
 	//text-decoration: inherit;
-	text-transform: inherit;
+	text-transform: @transform;
 	//@typo_base_rules();
 }
 
 .typo-body( @size; @height; @tracking; @weight:400; @decoration:inherit; @transform:inherit ) {
-	//font-family: @font-family;
-	font-family: @font-regular;
+	font-family: @font-family-body;
 	font-size: @size;
 	font-weight: @weight;
 	line-height: @height;
@@ -105,6 +103,7 @@
 
 //---
 
-.typo-button() {
-	.typo-body( 0.875rem, 2.25rem, 1.25em, 500, none, uppercase );
+.typo-button( @size:0.875rem; ) {
+	//.typo-body( 0.875rem, 2.25rem, 1.25em, 500, none, uppercase );
+	.typo-body( @size, 2.25rem, 1.25em, 500, none, uppercase );
 }
