@@ -1,8 +1,9 @@
 
 /* ––– ENRON-TYPOGRAPHY ––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-//@font-regular: Roboto;
-//@font-title: @font-regular;
+// Default fonts if not specified
+@font-family-regular: Roboto;
+@font-family-title: @font-family-regular;
 
 @typo_base_rules: {
 	-moz-osx-font-smoothing: grayscale;
@@ -22,24 +23,26 @@
 //---
 
 .typo-headline( @size; @height:@size; @weight:700; @transform:inherit ) {
-	font-family: @font-family-headline;
+	//font-family: @font-family-headline;
+	font-family: @font-family-title;
 	font-size: @size;
 	font-weight: @weight;
 	line-height: @height;
 	//text-decoration: inherit;
 	text-transform: @transform;
-	//@typo_base_rules();
+	@typo_base_rules();
 }
 
 .typo-body( @size; @height; @tracking; @weight:400; @decoration:inherit; @transform:inherit ) {
-	font-family: @font-family-body;
+	//font-family: @font-family-body;
+	font-family: @font-family-regular;
 	font-size: @size;
 	font-weight: @weight;
 	line-height: @height;
 	.typo-spacing( @size, @tracking );
 	//text-decoration: @decoration;
 	text-transform: @transform;
-	//@typo_base_rules();
+	@typo_base_rules();
 }
 
 //---
