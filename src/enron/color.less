@@ -1,5 +1,5 @@
 
-/* ––– ENRON-COLOR –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* ### ENRON-COLOR ### */
 
 @black: #000;
 @black-90: rgba(0,0,0,0.9);
@@ -30,3 +30,30 @@
 @white-05: rgba(255,255,255,0.05);
 @white-025: rgba(255,255,255,0.025);
 @white-0125: rgba(255,255,255,0.0125);
+
+/*
+@base: #663333;
+@complement1: spin(@base, 180);
+@complement2: darken(spin(@base, 180), 5%);
+@lighten1: lighten(@base, 15%);
+@lighten2: lighten(@base, 30%);
+*/
+
+
+/*
+	Usage:
+
+	//
+	color: .color-scheme( #3bafdA )[@complement];
+
+	//
+	color: .color-scheme( #3bafdA )[@triadic-secondary];
+	color: .color-scheme( #3bafdA )[@triadic-tertiary];
+*/
+.color-scheme( @base-color ) {
+
+	@complement: spin( @base-color, 180 );
+
+	@triadic-secondary: spin( @base-color, -(360/3) );
+	@triadic-tertiary: spin( @base-color, (360/3) );
+}

@@ -1,5 +1,5 @@
 
-/* ––– ENRON-MEDIA –––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* ### ENRON-MEDIA ### */
 
 @breakpoint-1:  360px; // small handset
 @breakpoint-2:  400px; // medium handset
@@ -26,9 +26,10 @@
 @not-small: ~"screen and (min-width: @{breakpoint-small})";
 @not-large: ~"screen and (min-width: @{breakpoint-large})";
 
+/*
 @phone: ~"(-webkit-min-device-pixel-ratio:2) and (orientation:portrait) and (max-width:30em),
 		  (-webkit-min-device-pixel-ratio:2) and (orientation:landscape) and (max-height:30em)";
-
+*/
 .on-max-width( @px; @rules ) {
 	@media (max-width:@px) { @rules(); }
 }
