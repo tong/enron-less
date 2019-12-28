@@ -1,7 +1,7 @@
 language: node_js
 
 before_script:
-  - npm install -g lessc
+    - sudo apt-get install node-less
 
 script:
     lessc --lint src/enron.less
