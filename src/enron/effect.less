@@ -1,7 +1,17 @@
 
-/* ––– ENRON-REFLECT –––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* ### ENRON-EFFECT ### */
 
 .reflect( @length:50%, @opacity:0.2 ) {
     box-reflect: below 0px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop( @length, transparent ), to( rgba( 255, 255, 255, @opacity ) ) );
     -webkit-box-reflect: below 0px -webkit-gradient( linear, left top, left bottom, from(transparent), color-stop( @length, transparent ), to( rgba( 255, 255, 255, @opacity ) ) );
+}
+
+/*
+	Example usage:
+		.vignette(10vw,10vh,400px,rgba(0,0,0,0.9));
+*/
+.vignette( @offsetX:10vw; @offsetY:10vh; @blur:15vmax; @color:rgba(0,0,0,0.5); ) {
+    box-shadow:
+        @offsetX @offsetY @blur @color inset,
+        -@offsetX -@offsetY @blur @color inset;
 }
