@@ -1,0 +1,17 @@
+
+/* ### ENRON-BACKGROUND ### */
+
+.background-grid( @size:10px; @color:#000; @thick:1px ) {
+	background-size: @size @size;
+	background-image:
+		linear-gradient(to right,@color @thick, transparent @thick),
+		linear-gradient(to bottom, @color @thick, transparent @thick);
+}
+
+.background-weave( @color:#000; @backgroundColor:#fff ) {
+	background:
+		linear-gradient(135deg, @backgroundColor 21px, @color 22px, @color 24px, transparent 24px, transparent 67px, @color 67px, @color 69px, transparent 69px),
+		linear-gradient(225deg, @backgroundColor 21px, @color 22px, @color 24px, transparent 24px, transparent 67px, @color 67px, @color 69px, transparent 69px)0 64px;
+	background-color:@backgroundColor;
+	background-size: 64px 128px;
+}
