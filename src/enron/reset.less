@@ -55,3 +55,12 @@ template {
 [tabindex="-1"]:focus {
 	outline: 0 !important;
 }
+
+@media print {
+	*,
+	*::after,
+	*::before {
+	  box-shadow: none !important;
+	  text-shadow: none !important;
+	}
+}
