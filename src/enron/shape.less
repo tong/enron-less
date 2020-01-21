@@ -1,0 +1,45 @@
+
+/* ### ENRON-SHAPE ### */
+
+.shape-circle( @size ) {
+    width: @size;
+    height: @size;
+    border-radius: 100%;
+}
+.shape-circle( @size; @color; ) {
+    .shape-circle( @size );
+    background-color: @color;
+}
+
+.shape-cross( @size; @color ) {
+    position: relative;
+    width: @size/5;
+    height: @size;
+    background: @color;
+    &:after {
+        position: absolute;
+        top: @size * 0.4;
+        left: -(@size * 0.4);
+        width: @size;
+        height: @size / 5;
+        content: "";
+        background: @color;
+    }
+}
+
+.shape-rectangle( @width; @height ) {
+	width: @width;
+	height: @height;
+}
+.shape-rectangle( @width; @height; @color ) {
+	.shape-rectangle( @width, @height );
+	background-color: @color;
+}
+
+.shape-square( @size ) {
+	.shape-rectangle( @size, @size );
+}
+.shape-square( @size; @color ) {
+	.shape-rectangle( @size, @size, @color );
+}
+
