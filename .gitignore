@@ -1,3 +1,5 @@
 _*
+*.css
+.vscode/
 guide/*.css
 guide/*.css.map
