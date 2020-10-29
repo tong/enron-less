@@ -1,16 +1,17 @@
 
 /* ### ENRON-ICON ### */
 
-@font-family-icon: 'Font Awesome';
+//@font-family-icon: 'fa';
 
-.icon() {
-	font-family: @font-family-icon !important;
-	//font-size: 1em;
+.icon( @font-family; @size:1em; @line-height:1 ) {
+	//font-family: @font-family-icon !important;
+	font-family: @font-family !important;
+	//font-size: @size;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	letter-spacing: normal;
-	//line-height: 1;
+	//line-height: @line-height;
 	text-transform: none;
 	speak: none;
 	direction: ltr;
