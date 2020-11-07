@@ -1,0 +1,13 @@
+{
+  "name": "enron",
+  "version": "0.1.0",
+  "description": "CSS library",
+  "scripts": {
+    "test": "lessc --lint src/enron.less"
+  },
+  "author": "tong@disktree.net",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^3.12.2"
+  }
+}
